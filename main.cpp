@@ -20,7 +20,8 @@ int main()
     //скопируем и тоже чуть сместим на 20 по высоте
     Circle c2 = c;
     c2.move(0,20);
-
+    Triangle t2 = t;
+    t2.move(0,20);
     //Создаем плоттер и добавляем в него фигуры
     ConsolePlotter p(40,100);
     p.addFigure(&l);
@@ -28,6 +29,7 @@ int main()
     p.addFigure(&t);
     p.addFigure(&r);
     p.addFigure(&c2);
+    p.addFigure(&t2);
     //Рисуем
     p.draw();
     return 0;

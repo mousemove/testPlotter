@@ -16,9 +16,9 @@ Rectangle::Rectangle(Point start, int height, int width, Color color) : Abstract
 
 Rectangle::Rectangle(const Rectangle &rectangle)
 {
-    _lines[0] = rectangle._lines[0];
-    _lines[1] = rectangle._lines[1];
-    _lines[2] = rectangle._lines[2];
+    _lines[0] = new Line(*rectangle._lines[0]);
+    _lines[1] = new Line(*rectangle._lines[1]);
+    _lines[2] = new Line(*rectangle._lines[2]);
     _lines[3] = rectangle._lines[3];
     _points = rectangle._points;
 }

@@ -9,7 +9,6 @@ using namespace std;
 class ConsolePlotter : public AbstractPlotter
 {
 private:
-    vector<pair<Point,Color>> points;//Отдельный вектор всех точек - для вывода в консоль предварительно их нужно сортировать
     char colorize(Color c);
 public:
     ConsolePlotter(int height = 40,int width = 100);

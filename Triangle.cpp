@@ -14,9 +14,9 @@ Triangle::Triangle(Point p1, Point p2, Point p3, Color color) :AbstractFigure(co
 
 Triangle::Triangle(const Triangle &triangle)
 {
-    _lines[0] =triangle._lines[0];
-    _lines[1] =triangle._lines[1];
-    _lines[2] =triangle._lines[2];
+    _lines[0] = new Line(*triangle._lines[0]);
+    _lines[1] =new Line(*triangle._lines[1]);
+    _lines[2] = new Line(*triangle._lines[2]);
     _points = triangle._points;
 }
 
